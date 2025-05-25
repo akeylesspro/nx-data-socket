@@ -1,10 +1,10 @@
 import express from "express";
 import { createServer } from "http";
 import main_router from "./main_router";
-import { initialize_socket_io } from "./socket/handler";
 import { get_version, init_env_variables } from "akeyless-server-commons/helpers";
 import { logger } from "akeyless-server-commons/managers";
 import { join } from "path";
+import { initialize_socket_io } from "./socket";
 
 const { port, mode } = init_env_variables(["port", "mode"]);
 
